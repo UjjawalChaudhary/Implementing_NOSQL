@@ -21,8 +21,12 @@ app.use(express.json());
 // Routes
 const userRoutes = require('./routes/user');
 const expenseRoutes = require('./routes/expense');
+const resetPasswordRoutes = require('./routes/resetpassword');
+
 app.use('/user', userRoutes);
 app.use('/expense', expenseRoutes);
+app.use('/password', resetPasswordRoutes);
+
 
 // Start the server
 const port = process.env.PORT || 3000;
